@@ -4,7 +4,12 @@ node {
     // requires SonarQube Scanner 2.8+
     def scannerHome = tool 'Sonar Runner';
 		
-    sh "${scannerHome}/bin/sonar-scanner -Dsonar.host.url=http://35.197.99.120:9000"
+    sh """
+                cd "$WORKSPACE/littlepassports"
+                ${scannerHome}/bin/sonar-scanner \
+                  -Dsonar.host.url=http://35.197.99.120:9000 \
+                  -Dsonar.login=admin
+                """
     }
   
 }
