@@ -6,6 +6,8 @@ node {
 		
     sh """
                 ${scannerHome}/bin/sonar-scanner \
+		 -Dsonar.projectKey=Sujata_test \
+                  -Dsonar.sources=. \
                   -Dsonar.host.url=http://35.197.99.120:9000 \
                   -Dsonar.login=admin \
 		  -Dsonar.password=admin
