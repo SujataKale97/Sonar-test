@@ -7,7 +7,8 @@ node {
     sh """
                 ${scannerHome}/bin/sonar-scanner \
                   -Dsonar.host.url=http://35.197.99.120:9000 \
-                  -Dsonar.login=admin
+                  -Dsonar.login=admin \
+		  -Dsonar.password=admin
                 """
     }
   
